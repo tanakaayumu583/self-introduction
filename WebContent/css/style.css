@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+/* 全体設定start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color:white;
+}
+
+body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+a{
+  text-decoration: none;
+}
+
+/* 全体設定end */
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  word-wrap: break-word;
+}
+
+#wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+/* ヘッダーstart */
+header {
+  padding: 30px 70px 40px 130px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+header .header-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin: 0 20px 0 0;
+}
+
+header li,
+header dl,
+header dt,
+header dd {
+  display: inline-block;
+}
+
+
+/* ヘッダーend */
+
+/* メインのコンテンツ */
+#container {
+  height: 100%;
+  width: 100%;
+  padding: 0 70px 0 130px;
+
+}
+
+/* 各セクションの詳細設定 */
+
+.fluid-area {
+  position: relative;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+}
+
+.fluid-area .middole {
+  padding: 0 0 0 7vw;
+}
+.topics-block time,.topics-block h3{
+  color:#006888;
+  text-align: center
+}
+.mask img{
+  height:150px;
+} 
+.item1 {
+  position: relative;
+  margin: 0 0 200px 0;
+}
+
+.top {
+  padding: 0 0 0 70px;
+}
+
+.middole {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.middole article {
+  width: 20%;
+  box-shadow: 0 0 10px #ccc;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.middole article:nth-of-type(1) {
+  position: relative;
+  top: 130px;
+}
+
+.middole article:nth-of-type(2) {
+  position: relative;
+  top: 80px;
+}
+
+.middole article:nth-of-type(3) {
+  position: relative;
+  top: 30px;
+}
+
+.item1 .bottom {
+  text-align: right;
+  padding: 100px 0 0 0;
+}
+
+.item2 {
+  position: relative;
+  margin: 0 0 200px 0;
+}
+
+/*========= topに行くためのCSS start===============*/
+
+/*リンクの形状*/
+#page-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #942D2F;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.6rem;
+  transition: all 0.3s;
+}
+
+#page-top a:hover {
+  background: #777;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+  animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+
+/*========= topに行くためのCSS end===============*/
+/* 背景start */
+#particles-js {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color:#006888;
+}
+
+#background_set {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+/* 背景end */
+
+/* 順番に項目表示start */
+.fadeUp {
+  animation-name:fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }

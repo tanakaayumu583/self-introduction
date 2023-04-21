@@ -1,0 +1,96 @@
+.timeline {
+    list-style: none;
+    margin-top:0px;
+    margin-left:100px;
+
+  }
+  .timeline > li {
+    margin-bottom: 60px;
+  }
+  .container{
+    width:65%;
+    /* margin: 0 auto; */
+    float: left;
+    margin-left:30px;
+   }
+   .image_container{
+    width:30%;
+    float: right;
+   }
+   .image_container_right{
+    width:50%;
+    float: right;
+   }
+      .image_container_left{
+    width:50%;
+    float: left;
+   }
+
+   .image_container img{
+    margin-bottom:10px;
+   }
+  #img_7{
+    margin-top:167px;
+  }
+  #img_2{
+    margin-left:50px;
+  }
+   .left{
+    margin: 0 auto 0 0;
+  }
+ .right {
+    margin: 0 0 0 auto;
+} 
+  body{
+    margin-left:0px;
+    margin-top:0px;
+    /* padding-top:0px; */
+
+  }
+  /* for Desktop */
+  @media ( min-width : 640px ){
+    .timeline > li {
+      overflow: hidden;
+      margin: 0;
+      position: relative;
+    }
+    .timeline-date {
+      width: 130px;
+      float: left;
+      margin-top: 20px;
+    }
+    .timeline-content {
+      width: 75%;
+      float: left;
+      border-left: 3px #e5e5d1 solid;
+      padding-left: 30px;
+    }
+    .timeline-content:before {
+    /* background-image: url(../image/steering_wheel.png); */
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: #6fc173;
+      position: absolute;
+      left: 125px;
+      top: 24px;
+      border-radius: 100%;
+    }
+  }
+  /* 背景start */
+#particles-js {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color:#006888;
+  }
+  
+  #background_set {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* 背景end */
